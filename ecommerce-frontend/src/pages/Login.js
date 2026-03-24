@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { ShoppingBag, Mail, Lock, CheckCircle2, Eye, EyeOff } from "lucide-react";
+import { Link } from "react-router-dom";
+import { ShoppingBag, Mail, Lock, Eye, EyeOff } from "lucide-react";
 import AuthService from "../services/auth.service";
 import "./Auth.css";
 
@@ -9,7 +9,6 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const [message, setMessage] = useState("");
-  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -35,11 +34,11 @@ const Login = () => {
           <span>SanjuStore</span>
         </div>
         <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <img 
-            src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png" 
-            alt="Shopping" 
-            className="auth-illustration" 
-            style={{ width: '250px', marginBottom: '2rem' }} 
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png"
+            alt="Shopping"
+            className="auth-illustration"
+            style={{ width: '250px', marginBottom: '2rem' }}
           />
           <h2>Welcome Back!</h2>
           <p style={{ color: 'var(--text-secondary)' }}>Sign in to your account to continue shopping</p>
@@ -50,36 +49,36 @@ const Login = () => {
           <span>New here?</span>
           <Link to="/register">Create Account</Link>
         </div>
-        
+
         <div className="auth-form-card">
           <h1 className="auth-title">Sign In</h1>
           <p className="auth-subtitle">Enter your credentials to access your account</p>
-          
+
           <form onSubmit={handleLogin}>
             <div className="form-group">
               <div className="input-with-icon">
                 <Mail />
-                <input 
-                  type="text" 
-                  placeholder="Email address or Username" 
-                  value={username} 
-                  onChange={(e) => setUsername(e.target.value)} 
-                  required 
+                <input
+                  type="text"
+                  placeholder="Email address or Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
                 />
               </div>
             </div>
             <div className="form-group">
               <div className="input-with-icon" style={{ position: 'relative' }}>
                 <Lock />
-                <input 
-                  type={showPassword ? "text" : "password"} 
-                  placeholder="Password" 
-                  value={password} 
-                  onChange={(e) => setPassword(e.target.value)} 
-                  required 
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   style={{ position: 'absolute', right: '10px', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
                 >
@@ -96,7 +95,7 @@ const Login = () => {
             </div>
 
             <button type="submit" className="btn-primary">Sign In</button>
-            
+
             {message && (
               <div style={{ marginTop: '1rem', color: 'var(--danger-color)', textAlign: 'center' }}>
                 {message}
@@ -116,7 +115,7 @@ const Login = () => {
               Continue with Apple
             </button>
           </div>
-          
+
           <div style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.9rem' }}>
             Don't have an account? <Link to="/register" style={{ color: 'var(--primary-color)', fontWeight: 'bold', textDecoration: 'none' }}>Sign Up</Link>
           </div>

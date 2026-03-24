@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { 
   ShoppingBag, Search, Heart, ShoppingCart, 
   Menu, Zap, Truck, Sun, Moon 
@@ -10,7 +10,6 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const currentUser = AuthService.getCurrentUser();
-  const navigate = useNavigate();
   const location = useLocation();
   const { theme, toggleTheme } = useTheme();
 

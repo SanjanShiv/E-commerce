@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Filter, ShoppingCart, Heart, Activity, Check, Plus, Edit2, Trash2 } from "lucide-react";
+import { Filter, ShoppingCart, Heart, Plus, Edit2, Trash2 } from "lucide-react";
 import ProductService from "../services/product.service";
 import AuthService from "../services/auth.service";
 import "./Dashboard.css";

@@ -22,7 +22,7 @@ const Register = () => {
       setMessage("Passwords do not match!");
       return;
     }
-    
+
     setMessage("");
     setSuccessful(false);
 
@@ -56,37 +56,37 @@ const Register = () => {
           <span>SanjuStore</span>
         </div>
         <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-          <img 
-            src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png" 
-            alt="Shopping Context" 
-            className="auth-illustration" 
-            style={{ width: '250px', marginBottom: '2rem' }} 
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/3514/3514491.png"
+            alt="Shopping Context"
+            className="auth-illustration"
+            style={{ width: '250px', marginBottom: '2rem' }}
           />
           <h2>Join SanjuStore Today!</h2>
           <p style={{ color: 'var(--text-secondary)' }}>Create your account and start shopping</p>
         </div>
       </div>
-      
+
       <div className="auth-right">
         <div className="auth-header-actions">
           <span>Already have an account?</span>
           <Link to="/login">Sign in</Link>
         </div>
-        
+
         <div className="auth-form-card">
           <h1 className="auth-title">Create Account</h1>
           <p className="auth-subtitle">Fill in your details to get started</p>
-          
+
           <form onSubmit={handleRegister}>
             <div className="form-group">
               <div className="input-with-icon">
                 <User />
-                <input 
-                  type="text" 
-                  placeholder="Username" 
-                  value={username} 
-                  onChange={(e) => setUsername(e.target.value)} 
-                  required 
+                <input
+                  type="text"
+                  placeholder="Username"
+                  value={username}
+                  onChange={(e) => setUsername(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -94,41 +94,41 @@ const Register = () => {
             <div className="form-group">
               <div className="input-with-icon">
                 <User />
-                <input 
-                  type="text" 
-                  placeholder="Full Name" 
-                  value={fullName} 
-                  onChange={(e) => setFullName(e.target.value)} 
-                  required 
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  value={fullName}
+                  onChange={(e) => setFullName(e.target.value)}
+                  required
                 />
               </div>
             </div>
-            
+
             <div className="form-group">
               <div className="input-with-icon">
                 <Mail />
-                <input 
-                  type="email" 
-                  placeholder="Email address" 
-                  value={email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                  required 
+                <input
+                  type="email"
+                  placeholder="Email address"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
                 />
               </div>
             </div>
-            
+
             <div className="form-group">
               <div className="input-with-icon" style={{ position: 'relative' }}>
                 <Lock />
-                <input 
-                  type={showPassword ? "text" : "password"} 
-                  placeholder="Password" 
-                  value={password} 
-                  onChange={(e) => setPassword(e.target.value)} 
-                  required 
+                <input
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   onClick={() => setShowPassword(!showPassword)}
                   style={{ position: 'absolute', right: '10px', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
                 >
@@ -136,19 +136,19 @@ const Register = () => {
                 </button>
               </div>
             </div>
-            
+
             <div className="form-group">
               <div className="input-with-icon" style={{ position: 'relative' }}>
                 <Lock />
-                <input 
-                  type={showConfirmPassword ? "text" : "password"} 
-                  placeholder="Confirm Password" 
-                  value={confirmPassword} 
-                  onChange={(e) => setConfirmPassword(e.target.value)} 
-                  required 
+                <input
+                  type={showConfirmPassword ? "text" : "password"}
+                  placeholder="Confirm Password"
+                  value={confirmPassword}
+                  onChange={(e) => setConfirmPassword(e.target.value)}
+                  required
                 />
-                <button 
-                  type="button" 
+                <button
+                  type="button"
                   onClick={() => setShowConfirmPassword(!showConfirmPassword)}
                   style={{ position: 'absolute', right: '10px', background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
                 >
@@ -190,7 +190,7 @@ const Register = () => {
             </div>
 
             <button type="submit" className="btn-primary" style={{ backgroundColor: '#f97316' }}>Create Account</button>
-            
+
             {message && (
               <div style={{ marginTop: '1rem', color: successful ? 'var(--success-color)' : 'var(--danger-color)', textAlign: 'center' }}>
                 {message}
@@ -208,9 +208,9 @@ const Register = () => {
               <img src="https://www.svgrepo.com/show/511330/apple-173.svg" alt="Apple" width="20" style={{ filter: 'var(--text-primary) === "#f8fafc" ? "invert(1)" : "none"' }} />
             </button>
           </div>
-          
+
           <div style={{ textAlign: 'center', marginTop: '1.5rem', fontSize: '0.8rem', color: 'var(--success-color)' }}>
-            <CheckCircle2 size={14} style={{ position: 'relative', top: '2px', marginRight: '4px' }}/> 
+            <CheckCircle2 size={14} style={{ position: 'relative', top: '2px', marginRight: '4px' }} />
             Your data is safe and secure with us
           </div>
         </div>

@@ -161,7 +161,7 @@ const Profile = () => {
           <div className="profile-card">
             <div className="card-title-row">
               <h3>Recent Orders</h3>
-              <a href="#" style={{color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600}}>View All →</a>
+              <a href="#!" style={{color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600}}>View All →</a>
             </div>
             
             <div className="recent-order-item">
@@ -173,7 +173,7 @@ const Profile = () => {
               </div>
             </div>
             
-            <a href="#" style={{color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600}}>Track All Orders →</a>
+            <a href="#!" style={{color: 'var(--primary-color)', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600}}>Track All Orders →</a>
           </div>
 
         </div>
