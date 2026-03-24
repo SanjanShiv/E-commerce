@@ -40,8 +40,7 @@ const Register = () => {
   };
 
   const handleGoogleLogin = () => {
-    const baseUrl = process.env.REACT_APP_API_URL || "http://localhost:8080";
-    window.location.href = `${baseUrl}/oauth2/authorization/google`;
+    window.location.href = "https://e-commerce-0ubl.onrender.com/oauth2/authorization/google";
   };
 
   // Basic validation checks
